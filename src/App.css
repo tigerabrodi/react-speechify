@@ -49,7 +49,7 @@ main {
       }
     }
 
-    .speech-rate {
+    .slider-wrapper {
       input[type='range'] {
         -webkit-appearance: none;
         width: 100%;
