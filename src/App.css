@@ -1,42 +1,47 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  align-items: center;
+  padding: 40px;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
   }
-  to {
-    transform: rotate(360deg);
+
+  textarea {
+    width: 600px;
+    height: 100px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    font-size: 1.2rem;
+    font-family: 'Overpass', sans-serif;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  select {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Overpass', sans-serif;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-family: 'Overpass', sans-serif;
+    cursor: pointer;
+    background-color: #f8f8f8;
 
-.read-the-docs {
-  color: #888;
+    &:hover {
+      background-color: #a59f9f;
+    }
+  }
 }
