@@ -10,6 +10,7 @@ function App() {
   const [text, setText] = useState('')
   const [rate, setRate] = useState(1)
   const [pitch, setPitch] = useState(1)
+  const [volume, setVolume] = useState(1)
 
   useEffect(() => {
     function setVoicesList() {
@@ -38,6 +39,7 @@ function App() {
     utterance.voice = voices.find((voice) => voice.name === selectVoice) || null
     utterance.rate = rate
     utterance.pitch = pitch
+    utterance.volume = volume
     synthRef.current.speak(utterance)
   }
 
@@ -89,6 +91,21 @@ function App() {
               setPitch(Number(e.target.value))
             }}
             aria-label="speech pitch"
+          />
+        </div>
+
+        <div className="slider-wrapper">
+          <p>Volume</p>
+          <input
+            type="range"
+            id="volume"
+            name="volume"
+            min="0"
+            max="1"
+            step="0.1"
+            value={volume}
+            onChange={(e) => setVolume(Number(e.target.value))}
+            aria-label="speech volume"
           />
         </div>
 
